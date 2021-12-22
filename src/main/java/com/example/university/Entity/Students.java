@@ -8,7 +8,6 @@ public class Students {
     // variable declaration
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Long student_id;
 

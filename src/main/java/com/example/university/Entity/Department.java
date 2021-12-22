@@ -9,18 +9,14 @@ public class Department {
 
     //variables declaration
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", nullable = false)
     private Long dept_id;
 
     private String dept_name;
 
-
     @OneToMany(mappedBy = "department_id",cascade = CascadeType.ALL)
     private List<Students> enrolled_students = new ArrayList<>();
-
-
-
 
     // getter and setters
 

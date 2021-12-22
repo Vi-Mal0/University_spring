@@ -1,6 +1,7 @@
 package com.example.university.Service;
 
 
+import com.example.university.Entity.Department;
 import com.example.university.Entity.Students;
 import com.example.university.Repository.StudentsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,10 +32,27 @@ public class StudentService {
         return "student added";
     }
 
+    //  delete
+    public String deleteStudentsById(Long id){
+        studentsRepository.deleteById(id);
+        return "data removed";
+    }
 
-    //update
+    public String deleteStudents(Students students){
+        studentsRepository.delete(students);
+        return "data removed";
+    }
 
-
-    //delete
-
+    //  update
+    public String updateStudentsByID(Long id,Students students){
+        Students stud = studentsRepository.getById(id);
+        if(students.getStudent_name() != null){
+            stud.setStudent_name(students.getStudent_name());
+        }
+        if(students.getDepartment_id() != null){
+            stud.setDepartment_id(students.getDepartment_id());
+        }
+        studentsRepository.save(stud);
+        return "updated successfully";
+    }
 }

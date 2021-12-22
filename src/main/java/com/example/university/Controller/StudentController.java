@@ -1,6 +1,7 @@
 package com.example.university.Controller;
 
 
+import com.example.university.Entity.Department;
 import com.example.university.Entity.Students;
 import com.example.university.Service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,5 +29,15 @@ public class StudentController {
     @PostMapping("addStudents")
     public String addStud(@RequestBody Students students){
         return studentService.addStudent(students);
+    }
+
+    @DeleteMapping("deleteStudents/{id}")
+    public String delStudById(@PathVariable("id") Long stud_id){
+        return studentService.deleteStudentsById(stud_id);
+    }
+
+    @PatchMapping("updateStudents/{id}")
+    public String updateStud(@PathVariable("id")Long stud_id,@RequestBody Students students){
+        return studentService.updateStudentsByID(stud_id,students);
     }
 }
