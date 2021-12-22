@@ -16,6 +16,7 @@ public class StudentService {
     @Autowired
     private StudentsRepository studentsRepository;
 
+    // view
     public List<Students> viewStudents(){
         return studentsRepository.findAll();
     }
@@ -24,9 +25,16 @@ public class StudentService {
         return studentsRepository.findById(id);
     }
 
+    // create
     public String addStudent(Students students){
         studentsRepository.save(students);
         return "student added";
     }
+
+
+    //update
+
+
+    //delete
 
 }

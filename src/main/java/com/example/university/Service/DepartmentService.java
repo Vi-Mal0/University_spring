@@ -14,6 +14,7 @@ public class DepartmentService {
     @Autowired
     private DepartmentRepository departmentRepository;
 
+    //  view
     public List<Department> viewDepartment(){
         return departmentRepository.findAll();
     }
@@ -22,14 +23,35 @@ public class DepartmentService {
         return departmentRepository.findById(id);
     }
 
+    //  create
+
     public String addDepartment(Department department){
         departmentRepository.save(department);
         return "department added ";
     }
 
+    //  delete
     public String deleteDepartmentById(Long id){
         departmentRepository.deleteById(id);
         return "data removed";
+    }
+
+    public String deleteDepartment(Department department){
+        departmentRepository.delete(department);
+        return "data removed";
+    }
+
+    //  update
+    public String updateDepartmentByID(Long id,Department department){
+        Department dept = departmentRepository.getById(id);
+        if(department.getDept_name() != null){
+            dept.setDept_name(department.getDept_name());
+        }
+        else{
+            return "invalid null args";
+        }
+        departmentRepository.save(dept);
+        return "updated successfully";
     }
 
 }

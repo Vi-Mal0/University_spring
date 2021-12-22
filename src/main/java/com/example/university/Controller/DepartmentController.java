@@ -33,4 +33,9 @@ public class DepartmentController {
         return departmentService.deleteDepartmentById(dept_id);
     }
 
+    @PatchMapping("updateDepartment/{id}")
+    public String updateDept(@PathVariable("id")Long dept_id,@RequestBody  Department department){
+        return departmentService.updateDepartmentByID(dept_id,department);
+    }
+
 }
