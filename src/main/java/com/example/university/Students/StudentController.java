@@ -1,9 +1,6 @@
-package com.example.university.Controller;
+package com.example.university.Students;
 
 
-import com.example.university.Entity.Department;
-import com.example.university.Entity.Students;
-import com.example.university.Service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

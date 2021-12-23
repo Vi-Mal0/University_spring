@@ -1,7 +1,7 @@
-package com.example.university.Service;
+package com.example.university.Departments;
 
-import com.example.university.Entity.Department;
-import com.example.university.Repository.DepartmentRepository;
+import com.example.university.Departments.Department;
+import com.example.university.Departments.DepartmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,5 @@
-package com.example.university.Controller;
+package com.example.university.Departments;
 
-import com.example.university.Entity.Department;
-import com.example.university.Service.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;

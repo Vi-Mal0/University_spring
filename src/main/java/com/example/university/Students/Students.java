@@ -1,4 +1,6 @@
-package com.example.university.Entity;
+package com.example.university.Students;
+
+import com.example.university.Students.StudentProfile.StudentProfile;
 
 import javax.persistence.*;
 
@@ -13,6 +15,10 @@ public class Students {
 
     private  String student_name;
 
+    private Long department_id;
+
+    // getters and setters
+
     public Long getDepartment_id() {
         return department_id;
     }
@@ -20,11 +26,6 @@ public class Students {
     public void setDepartment_id(Long department_id) {
         this.department_id = department_id;
     }
-
-    private Long department_id;
-
-    // getters and setters
-
 
     public Long getStudent_id() {
         return student_id;

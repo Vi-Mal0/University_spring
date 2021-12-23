@@ -1,4 +1,6 @@
-package com.example.university.Entity;
+package com.example.university.Departments;
+
+import com.example.university.Students.Students;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -9,7 +11,6 @@ public class Department {
 
     //variables declaration
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", nullable = false)
     private Long dept_id;
 
@@ -17,6 +18,7 @@ public class Department {
 
     @OneToMany(mappedBy = "department_id",cascade = CascadeType.ALL)
     private List<Students> enrolled_students = new ArrayList<>();
+
 
     // getter and setters
 

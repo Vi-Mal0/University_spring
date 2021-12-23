@@ -1,13 +1,9 @@
-package com.example.university.Service;
+package com.example.university.Students;
 
 
-import com.example.university.Entity.Department;
-import com.example.university.Entity.Students;
-import com.example.university.Repository.StudentsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 
