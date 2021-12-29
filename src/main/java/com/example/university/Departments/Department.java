@@ -18,5 +18,6 @@ public class Department {
     private String dept_name;
 
     @OneToMany(mappedBy = "department_id",cascade = CascadeType.ALL)
+
     private List<Students> enrolled_students = new ArrayList<>();
 }
