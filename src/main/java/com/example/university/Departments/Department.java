@@ -18,12 +18,6 @@ public class Department {
 
     private String dept_name;
 
-
-    // uni directional
-//    @OneToMany(mappedBy = "department_id",cascade = CascadeType.ALL)
-//    private List<Students> enrolled_students = new ArrayList<>();
-
-
     @OneToMany(mappedBy = "department",cascade = CascadeType.ALL)
     @JsonManagedReference
     private List<Students> enrolled_students = new ArrayList<>();
