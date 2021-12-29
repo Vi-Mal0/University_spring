@@ -1,6 +1,5 @@
 package com.example.university.Students.StudentProfile;
 
-import com.example.university.Students.Students;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
